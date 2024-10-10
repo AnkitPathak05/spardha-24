@@ -17,6 +17,7 @@ import {
 } from 'reactstrap';
 import styles from '../Signup/Signup.module.css';
 
+
 function Forgot() {
   const ref_container = useRef();
   useEffect(() => {
@@ -81,7 +82,8 @@ function Forgot() {
     message: '',
   });
 
-  return (
+  return (<div className={`${styles.outerdiv}`}>
+    <div className={`${styles.maindiv}`}>
     <div id="forgotDiv" ref={ref_container}>
       <h3 className={`${styles.heading}`}> FORGOT PASSWORD </h3>
       <hr />
@@ -214,6 +216,9 @@ function Forgot() {
           </Button>
         </div>
       </Form>
+    </div>
+    </div>
+
     </div>
   );
 }
